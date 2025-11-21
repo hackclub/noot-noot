@@ -25,8 +25,7 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [agreedToNootNoot]);
 
-  // Use environment variable for base URL, fallback to relative path
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || (typeof window !== 'undefined' ? window.location.origin : '');
+  const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
   const ogImage = baseUrl ? `${baseUrl}/imageOne.png` : '/imageOne.png';
 
   if (!agreedToNootNoot) {
@@ -68,7 +67,7 @@ export default function Home() {
         <meta name="twitter:image" content={ogImage} />
       </Head>
       <div style={{display: 'flex', justifyContent: 'center', minHeight: '100vh', width: '100vw', padding: '20px', boxSizing: 'border-box'}}>
-    <div style={{maxWidth: '600px', width: '100%'}}>
+    <div style={{maxWidth: '600px', width: '100%', marginTop: '20px'}}>
     <audio ref={audioRef} src="/nootnoot.mp3" preload="auto" />
     <audio ref={seasonSongRef} src="/seasonSong.mp3" preload="auto" loop />
     {/* <p className="title" style={{textAlign: "center"}}>
