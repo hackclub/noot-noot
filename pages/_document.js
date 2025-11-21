@@ -1,9 +1,12 @@
-import { Html, Head, Main, NextScript } from "next/document";
+import { Html, Head, Main, NextScript } from 'next/document';
 
 export default function Document() {
   return (
-    <Html lang="en">
-      <Head />
+    <Html>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/dootCursor.png" />
+      </Head>
       <body>
         <Main />
         <NextScript />
@@ -11,3 +14,4 @@ export default function Document() {
     </Html>
   );
 }
+

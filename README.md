@@ -1,8 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Noot-Noot Weekend
+
+**What if the linux penguin was the noot-noot penguin?**
+
+A weekend hackathon site for building Linux applications with subtle noot-noot penguin references. This is a Next.js website that showcases the Noot-Noot Weekend challenge.
+
+## About
+
+Noot-Noot Weekend is a weekend hackathon where participants design, code, and ship offline-compatible Linux applications. The challenge is to create lightweight apps that can run on a Raspberry Pi 5, all while incorporating subtle noot-noot penguin references.
+
+## Features
+
+- **Interactive Experience**: Users must agree to "experience noot noot" before accessing the full site
+- **Dynamic Content**: Images and text swap every 5 seconds with accompanying sound effects
+- **Background Music**: Seasonal music plays on loop after user consent
+- **Custom Cursor**: Doot cursor image throughout the site
+- **Low Opacity Text**: Text appears at reduced opacity until hovered, creating an interactive reading experience
+- **Mobile Friendly**: Responsive design that works on all devices
+
+## Challenge Details
+
+- **Duration**: Weekend hackathon (Nov 21-Nov 23)
+- **Requirement**: Build an offline-compatible Linux application
+- **Constraint**: Must be lightweight enough to run on a Raspberry Pi 5
+- **Theme**: Include subtle noot-noot penguin reference(s)
+- **Framework Options**: GTK, Electron, Godot, Qt, or anything you'd like
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js installed
+- npm, yarn, pnpm, or bun
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+```
+
+3. Run the development server:
 
 ```bash
 npm run dev
@@ -10,32 +53,47 @@ npm run dev
 yarn dev
 # or
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Project Structure
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```
+sleigh/
+├── pages/
+│   ├── _app.js          # App wrapper with global styles
+│   ├── _document.js      # Custom document with favicon and meta tags
+│   └── index.js          # Main page component
+├── public/
+│   ├── dootCursor.png    # Custom cursor image
+│   ├── imageOne.png      # First swap image
+│   ├── imageTwo.png      # Second swap image
+│   ├── nootnoot.mp3      # Sound effect for swaps
+│   └── seasonSong.mp3    # Background music
+└── styles/
+    └── globals.css       # Global styles and cursor
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+## Technologies Used
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Next.js** - React framework
+- **React** - UI library
+- **CSS** - Styling with custom cursor and opacity effects
 
-## Learn More
+## Links
 
-To learn more about Next.js, take a look at the following resources:
+- [Join #noot-noot on Slack](https://hackclub.slack.com/archives/C09V8D7CEP2)
+- [Ship your project](https://forms.hackclub.com/t/kGBsn7Gz3mus)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+## Notes
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- This is a weekend-only event - if you miss it, you'll never be part of the Noot-Noot weekend hackathon ship site
+- All apps will be showcased in a video running on Raspberry Pi 5
+- Participants who complete the challenge may receive vintage postcards
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+*in life we are always learning*
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
-# noot-noot
+~Thomas
